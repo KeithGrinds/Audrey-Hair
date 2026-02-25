@@ -1,0 +1,193 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#111;
+color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:25px 8%;
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+.navbar a{
+color:white;
+margin-left:30px;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+padding-top:120px;
+padding-bottom:100px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+padding:0 8%;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#f7c6d9;
+margin-bottom:30px;
+}
+
+.hero-image img{
+width:100%;
+border-radius:30px;
+transition:0.5s;
+}
+
+.hero-image img:hover{
+transform:scale(1.05);
+}
+
+/* CTA */
+
+.cta{
+background:#b3125d;
+padding:15px 40px;
+border-radius:40px;
+text-decoration:none;
+color:white;
+display:inline-block;
+transition:0.4s;
+}
+
+.cta:hover{
+transform:scale(1.08);
+box-shadow:0 0 30px #b3125d;
+}
+
+.large{
+padding:20px 60px;
+font-size:1.2rem;
+}
+
+/* EXPERIENCE */
+
+.experience{
+padding:120px 8%;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+margin-top:60px;
+perspective:1000px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:50px 30px;
+border-radius:25px;
+transition:0.4s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:rotateY(15deg) scale(1.05);
+box-shadow:0 0 40px #b3125d;
+}
+
+/* RESULTS */
+
+.results{
+padding:120px 8%;
+text-align:center;
+}
+
+.before-after{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:50px;
+}
+
+.before-after img{
+width:45%;
+border-radius:30px;
+transition:0.5s;
+}
+
+.before-after img:hover{
+transform:scale(1.05);
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+padding:120px 8%;
+text-align:center;
+background:#1a1a1a;
+}
+
+blockquote{
+font-size:1.4rem;
+max-width:700px;
+margin:40px auto 0;
+}
+
+/* CONTACT */
+
+.contact{
+padding:120px 8%;
+text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+padding:50px;
+text-align:center;
+background:black;
+color:#b3125d;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+.hero-grid{
+grid-template-columns:1fr;
+}
+.cards{
+grid-template-columns:repeat(2,1fr);
+}
+.before-after{
+flex-direction:column;
+}
+.before-after img{
+width:100%;
+}
+}
+
+@media(max-width:600px){
+.cards{
+grid-template-columns:1fr;
+}
+}
